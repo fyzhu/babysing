@@ -8,7 +8,7 @@ var reload = browserSync.reload;
 gulp.task('serve', ['sass'], function () {
 
     browserSync.init({
-        server: "./app/html",
+        server: "./app",
         open: false
     });
 
