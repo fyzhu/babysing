@@ -10,34 +10,80 @@ li {
 }
 
 section {
+    padding-bottom: 65px;
     height: 100%;
     margin: 0 12px;
+    .bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #d6d7dc;
+        margin-left: -12px;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 30%;
+                text-align: center;
+                a {
+                    display: block;
+                    padding-top: 32px;
+                    padding-bottom: 5px;
+                    font-size: 12px;
+                    background: url(../images/btn2.png) center 6px no-repeat;
+                    background-size: 18px 18px;
+                    color: #aeb1b0;
+                }
+            }
+            li.on {
+                a {
+                    background-image: url(../images/btn2on.png);
+                    color: #1b201f;
+                }
+            }
+            li:first-child a {
+                background-image: url(../images/btn1.png);
+                background-size: 27px;
+            }
+            li.on:first-child a {
+                background-image: url(../images/btn1on.png);
+            }
+            li:last-child a {
+                background-image: url(../images/btn3.png);
+                background-size: 21px 16px;
+            }
+            li.on:last-child a {
+                background-image: url(../images/btn3on.png);
+            }
+        }
+    }
 }
 
 .babysing {
-    .top{
+    .top {
         display: flex;
         justify-content: space-between;
-        input{
+        input {
             color: #adadad;
             background: #f4f4f4;
-            border:0;
+            border: 0;
             font-size: 12px;
             height: 25px;
             line-height: 25px;
-            &:active{
-                border:0;
+            &:active {
+                border: 0;
             }
         }
-        .rank{
+        .rank {
             width: 36px;
             text-align: center;
-            img{
+            img {
                 width: 22px;
                 display: block;
-                margin:0 auto;
+                margin: 0 auto;
             }
-            a{
+            a {
                 color: #1b201f;
                 font-size: 8px;
             }
@@ -55,7 +101,7 @@ section {
         border-bottom: 1px solid #ecefef;
         overflow: hidden;
         li {
-            float: left;    
+            float: left;
             color: #aeb1b0;
             font-size: 14px;
             margin-right: 16px;
@@ -68,63 +114,283 @@ section {
             color: #6ce4ba;
         }
     }
-    .mainlist li{
+    .mainlist li {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid #ecefef;
+        width: 100%;
+        padding: 0 12px;
+        margin-left: -12px;
         .info {
-             display: flex;
-             justify-content: left;
-             height: 75px;
-             padding:15px  0;
-             border-bottom: 1px solid #ecefef;
+            display: flex;
+            justify-content: left;
+            height: 75px;
+            padding: 15px 0;
             img {
                 float: left;
                 width: 75px;
                 height: 75px;
                 margin-right: 17px;
             }
-            .title{
+            .title {
                 font-size: 15px;
                 color: #1b201f;
+                line-height: 25px;
             }
-            .singer{
+            .singer {
+                font-size: 12px;
+                line-height: 24px;
+                color: #aeb1b0;
+            }
+            .num {
+                line-height: 24px;
                 font-size: 12px;
                 color: #aeb1b0;
             }
-            .num{
-                font-size: 12px;
-                color: #aeb1b0;
-            }
-
         }
-        .singbtn{
-            margin-top: 40px;
+        .singbtn {
+            // margin-top: 40px;
             width: 71px;
             height: 28px;
             line-height: 28px;
             font-size: 14px;
-            color: #fff;
-            background: linear-gradient(to right, #6ce4ba, #77e46c) ;
-            
+            margin: 40px 7px 0;
+            a {
+                display: block;
+                background: url(../images/mic.png)6px center no-repeat;
+                background-size: 16px;
+                color: #fff;
+                text-indent: 4px;
+            }
+            background: linear-gradient(to left, #6ce4ba, #77e46c);
             border-radius: 14px;
             text-align: center;
-            img{
-                width: 13px;
-                // margin-top: 3px;
+            img {
+                width: 13px; // margin-top: 3px;
             }
         }
     }
-    .bottom{
-        position: fixed;
-        bottom: 0;
+}
+
+
+.list{
+    .main-list li{
         width: 100%;
-        background: #fff;
-        border-top: 1px solid #d6d7dc;
+        padding: 15px 12px;
+        border-bottom: 1px solid #f9f9f9;        
         margin-left: -12px;
-        ul{
-            
-            display: flex;
-            justify-content: space-around;
+    }
+    .user-info{
+       height: 40px;
+       line-height: 40px;
+        img{
+            float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            margin-right: 10px;
         }
+        span{
+            color: #1b201f;
+            font-size: 15px;
+        }
+    }
+    .content{
+        color: #1b201f;
+        font-size: 15px;
+        padding: 12px 0;
+    }
+    .song{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ecefef;
+        width: 100%;        
+        background: #f4f4f4;
+        .info {
+            display: flex;
+            justify-content: left;
+            height: 75px;
+            // padding: 15px 0;
+            a{
+                float: left;
+                position: relative;
+                width: 75px;
+                height: 75px;
+                margin-right: 17px;
+                display: block;
+            }
+            a:after{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: 0.11);
+                background-image: url(../images/play.png) ;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 17px;
+            }
+            img {
+                
+                width: 75px;
+                height: 75px;
+                
+            }
+            .title {
+                font-size: 15px;
+                color: #1b201f;
+                line-height: 25px;
+            }
+            .singer {
+                font-size: 12px;
+                line-height: 24px;
+                color: #aeb1b0;
+            }
+            .num {
+                line-height: 24px;
+                font-size: 12px;
+                color: #aeb1b0;
+                span{
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .singbtn {
+            // margin-top: 40px;
+            width: 53px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            margin: 25px 7px 0;
+            a {
+                display: block;
+                // background: url(../images/mic.png)6px center no-repeat;
+                // background-size: 16px;
+                color: #fff;
+                // text-indent: 4px;
+            }
+            background: linear-gradient(to left, #6ce4ba, #77e46c);
+            border-radius: 14px;
+            text-align: center;
+            img {
+                width: 13px; // margin-top: 3px;
+            }
+        }
+    }
+}
+
+.me{
+    .user-info{
+        width: 100%;
+        height: 180px;
+        background: linear-gradient(to left, #6ce4ba, #77e46c);
+        text-align: center;
+        padding: 0 12px;
+        margin-left: -12px;
+        img{
+            width: 53px;
+            height: 53px;
+            border: 3px solid #c5f4d5;
+            border-radius: 50px;
+            margin-top: 53px;
+        }
+        .username{
+            color: #fff;
+            font-size: 15px;
+            margin-top: 9px;
+        }
+    }
+    .lolipop{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top:-30px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 3.5px 4.5px rgba($color: #000000, $alpha: 0.11);
+        .num{
+            padding-left: 53px;
+            background: url(../images/lolipop.png)15px center no-repeat;
+            background-size: 31px;
+        }
+        a{
+            margin: 16px;
+            color: #6ce4ba;
+            font-size: 15px;
+            height: 25px;
+            width: 64px;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 13px;
+            border: 1px solid #6ce4ba;
+        }
+    }
+    .album-list{
+        .album-title{
+            color: #1b201f;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        ul{
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            text-align: left;
+            li{
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 30px;
+                a{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    
+                }
+                a:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($color: #000000, $alpha: 0.11);
+                    background-image: url(../images/play.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 17px;
+                }
+            }
+            li:nth-child(3n){
+                margin-right: 0;
+            }
+            img{
+               width: 100%;               
+            }
+            .title{
+                color: #1b201f;
+                font-size: 13px;
+                line-height: 30px;
+                font-weight: bold;
+            }
+            .num{
+                padding-left: 15px;
+                background: url(../images/lolipop.png)1px center no-repeat;
+                background-size: 12px;
+                color: #adadad;
+                font-size: 12px;
+                height: 17px;
+                line-height: 17px;
+            }
+        }
+
     }
 }
