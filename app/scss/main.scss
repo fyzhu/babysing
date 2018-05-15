@@ -10,6 +10,7 @@ li {
 }
 
 section {
+    // overflow-x: hidden;
     padding-bottom: 65px;
     height: 100%;
     margin: 0 12px;
@@ -404,5 +405,107 @@ section {
             }
         }
 
+    }
+}
+
+.rank{
+    .banner{
+        margin: 0 -12px;
+        img {
+            width: 100%;
+        }
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        div{
+            display: table-cell;
+            vertical-align: bottom;
+            .title{
+                color: #1b201f;
+                font-size: 20px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+            .me{
+                color: #adadad;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        a{
+            color: #6ce4ba;
+            display: inline-block;
+            height: 25px;
+            width: 64px;
+            text-align: center;
+            font-size: 13px;
+            border: 1px solid #6ce4ba;
+            border-radius: 13px;
+            line-height: 25px;
+        }
+    }
+    ul li{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: space-between;
+        height: 65px;
+        line-height: 65px;
+        border-bottom: 1px solid #ecefef;
+        .therank{
+            display: inline-block;
+            width: 25px;
+            text-align: right;
+        }
+        img{
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 11px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+        color: #1b201f;
+        font-weight: bold;
+        .userinfo{
+            font-size: 15px;
+            display: flex;
+            
+        }
+        .lolipop{
+            font-size: 13px;
+            padding-left: 15px;
+            background: url(../images/lolipop.png)left center no-repeat;
+            background-size: 10px;
+        }
+    }
+    li.special .therank{
+        color: #fff;
+        text-indent: 9999px;
+        background: url(../images/first.png)right center no-repeat;
+        background-size: 12px;
+    }
+    li.first .username{
+        color: #ec6e4b;
+    }
+    li.second .username{
+        color: #f4ba5c;
+    }
+    li.second .therank {        
+        background-image: url(../images/second.png);
+    }
+    li.third .username {
+        color: #7ac9f5;
+    }
+    li.third .therank {
+        color: #7ac9f5;
+        background-image: url(../images/third.png);
+    }
+    .rank-tip{
+        text-align: center;
+        color: #adadad;
+        font-size: 12px;
+        margin:20px 0;
     }
 }
