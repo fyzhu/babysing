@@ -64,20 +64,32 @@ section {
     .top {
         display: flex;
         justify-content: space-between;
+        .search{
+            width: 89%;
+
+        }
         input {
-            color: #adadad;
-            background: #f4f4f4;
+            width: 100%;
+            padding-left: 30px;
+            box-sizing: border-box;
+            background:#f4f4f4 url(../images/search.png)10px center no-repeat;
+            background-size: 15px 15px;
+            color: #adadad;            
             border: 0;
             font-size: 12px;
             height: 25px;
             line-height: 25px;
+            margin: 5px 0;
+            border-radius: 13px;
             &:active {
                 border: 0;
             }
         }
         .rank {
             width: 36px;
+            margin-top: 1px;
             text-align: center;
+            line-height: 1;
             img {
                 width: 22px;
                 display: block;
