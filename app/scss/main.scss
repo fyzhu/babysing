@@ -739,3 +739,209 @@ section {
         }
     }
 }
+
+section.detail{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+    .content{
+        position: relative;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        height: 155px;
+        background: rgba(#4c4d44, .81);
+        padding-top: 65px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+        .lyric{
+            margin-top: 35px;
+            font-size: 15px;
+            color: #fbeb52;
+        }
+        .bg {
+            position: absolute;
+            z-index: -1;
+            filter: blur(10px);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #b4b0fa url(../images/logo.png) center no-repeat;
+        }
+        .control{
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            height: 18px;
+            line-height: 18px;
+            
+            .play{
+                width: 14px;
+                height: 18px;
+                margin-left: 20px;
+                background: url(../images/play.png) center no-repeat;
+                background-size: 14px;
+                float: left;
+                &.playing{
+                    background-image: url(../images/pause.png);
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .progress-bar{
+                height: 18px;
+                padding-left: 44px;
+                padding-right: 100px;
+                .bar-inner{
+                    margin-top: 8px;
+                    height: 2px;
+                    width: 100%;
+                    background: #fff;
+                    position: relative;
+                    .progress{
+                        position: absolute;
+                        top:-1px;
+                        width: 50%;
+                        height: 4px;
+                        background: #fbec53;
+                    }
+                    .progress-btn{
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: #fbec53;
+                        position: absolute;
+                        left: 50%;
+                        top:-5px;
+                    }
+                }
+            }
+            .time{
+                float: right;
+                margin-right: 18px;
+                font-size: 12px;
+
+            }
+        }        
+    }
+    .user-info{
+        padding: 15px 12px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ecefef;
+        img{
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+        .left{
+            display: flex;
+            justify-content: start;
+            .middle{
+                margin-top: 10px;
+                margin-left: 11px;
+                color: #1b201f;
+                font-size: 15px;
+                .num{
+                    color: #adadad;
+                    margin-top: 10px;
+                    font-size: 13px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .score{
+            color: #cec42b;
+            font-size: 10px;
+            span{
+                font-size: 23px;
+            }
+        }
+    }
+    .recieve-lolipop{
+        display: flex;
+        justify-content: space-between;
+        height: 58px;
+        line-height: 58px;
+        border-bottom: 1px solid #ecefef;
+        .title{
+            padding-left: 59px;
+            background: url(../images/lolipop.png)23px center no-repeat;
+            background-size: 22px;
+            color: #1b201f;
+            font-size: 15px;
+        }
+        .num{
+            color: #6ee4a9;
+            padding-right: 40px;
+        }
+    
+    }
+    .lolipop-num{
+        position: fixed;
+        width: 100%;
+        bottom: 59px;
+        height: 37px;
+        line-height: 37px;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        .send{
+            width: 56px;
+            background-color: #f3b45d;
+            color: #fff;
+        }
+        span{
+            height: 22px;
+            line-height: 22px;
+            margin-top: 6px;
+            width: 54px;
+            border-radius: 11px;
+            border: 1px solid #f3b45d;
+            margin-left: 12px;
+            &.on{
+                color: #fff;
+                background: linear-gradient(to left, #f3b45d, #f9de59);
+            }
+        }
+    }
+    .bottom-btn{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background: linear-gradient(to left, #6ce4ba, #77e46c);
+        div{
+            width: 50%;
+            text-align: center;
+            height: 49px;
+            font-size: 10px;
+            padding-top: 10px;
+            
+            a{
+                padding-top: 25px;
+                height: 100%;
+                display: block;
+                color: #fff;            
+                background: url(../images/share.png)center 0 no-repeat;
+                background-size: 21px;
+            }
+            
+            &.lolipop{
+                background: rgba(#fff, .2);
+                a{
+                    background-image: url(../images/white-lolipop.png);
+                }
+            }
+        }
+
+    }
+}
