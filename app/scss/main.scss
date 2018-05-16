@@ -8,7 +8,12 @@ li {
     padding: 0;
     list-style: none;
 }
-
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
 section {
     // overflow-x: hidden;
     padding-bottom: 65px;
@@ -507,5 +512,106 @@ section {
         color: #adadad;
         font-size: 12px;
         margin:20px 0;
+    }
+}
+
+.sing{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #b4b0fa url(../images/logo.png) center no-repeat;
+    color: #fff;
+    .hover{
+        height: 100%;
+        background: rgba($color: #222419, $alpha: .8)
+    }
+    .top{
+        display: flex;
+        justify-content: space-around;
+        div{
+            padding-top: 33px;
+            margin-top: 47px;
+            font-size: 12px;
+            font-weight: bold;
+            width: 33px;
+            text-align: center;
+            a{
+                color: #aeb1b0;
+            }
+        }
+        .company{
+            background: url(../images/companyoff.png) center 0 no-repeat;
+            background-size: 27px;
+            
+        }
+        .company.on {
+            background-image: url(../images/companyon.png);
+            background-size: 33px;
+            a{
+                color: #fff;
+            }
+        }
+        
+        .source{
+            background: url(../images/sourceoff.png) center 1px no-repeat;
+            background-size: 28px;
+            &.on{
+                background-image: url(../images/sourceon.png);
+                background-size: 34px;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .content{
+        text-align: center;
+        margin-top: 44px;
+        font-weight: bold;
+        font-size: 18px;
+        .song-name{
+            
+        }
+        .lyrics{
+            margin-top: 16px;
+            font-size: 15px;
+            
+            line-height: 25px;
+        }
+    }
+    .bottom-btn{
+        position: fixed;
+        bottom: 23px;
+        width: 100%;
+        .func{
+            display: flex;
+            justify-content: space-between;
+            div {
+                padding: 20px 33px;
+                margin-top: 33px;
+                font-size: 12px;
+                font-weight: bold;
+                width: 33px;
+                text-align: center;
+                &.effect{
+                    background: url(../images/effect.png) center 1px no-repeat;
+                    background-size: 21px;
+                }
+                &.stop {
+                    background: url(../images/stop.png) center 0px no-repeat;
+                    background-size: 20px;
+                }
+            }
+        }
+        .btn{
+            text-align: center;
+            margin:0 63px;
+            height: 52px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 52px;
+            border-radius: 26px;
+            background: linear-gradient(to left, #6ce4ba, #77e46c);
+        }
     }
 }
