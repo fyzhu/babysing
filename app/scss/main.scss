@@ -200,6 +200,23 @@ section {
             }
         }
     }
+    .lolipop{
+        position: fixed;
+        left: 50%;
+        top:50%;
+        margin-left: -75px;
+        margin-top: -62.5px;
+        background: #fff url(../images/lolipop.png) center 10px no-repeat;
+        background-size: 28px;
+        border-radius: 4px;
+        text-align: center;
+        box-shadow: 0 0 18px 0px rgba($color: #383838, $alpha: .19);
+        width: 150px;
+        height: 20px;
+        padding-top: 65px;
+        font-size: 12px;
+        color: #7de7c2;
+    }
 }
 
 .list {
@@ -662,98 +679,164 @@ section {
     }
     .hover {
         height: 100%;
-        background: rgba($color: #222419, $alpha: .8)
-    }
-    .top {
-        display: flex;
-        justify-content: space-around;
-        div {
-            a {
-                display: block;
-                padding-top: 33px;
-                margin-top: 47px;
-                font-size: 12px;
-                font-weight: bold;
-                width: 33px;
-                text-align: center;
-                color: #aeb1b0;
-            }
-        }
-        .company a {
-            background: url(../images/companyoff.png) center 0 no-repeat;
-            background-size: 27px;
-        }
-        .company.on {
-            a {
-                background-image: url(../images/companyon.png);
-                background-size: 33px;
-                color: #fff;
-            }
-        }
-        .source a {
-            background: url(../images/sourceoff.png) no-repeat;
-            background-size: 28px;
-            background-position: center 1px;
-        }
-        .source.on {
-            a {
-                background-image: url(../images/sourceon.png);
-                background-size: 34px;
-                background-position: center 0;
-                color: #fff;
-            }
-        }
-    }
-    .content {
-        text-align: center;
-        margin-top: 44px;
-        font-weight: bold;
-        font-size: 18px;
-        .song-name {}
-        .lyrics {
-            margin-top: 16px;
-            font-size: 15px;
-            line-height: 25px;
-        }
-    }
-    .bottom-btn {
-        position: fixed;
-        bottom: 23px;
-        width: 100%;
-        .func {
+        background: rgba($color: #222419, $alpha: .8);
+        .top {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             div {
-                padding: 20px 33px;
-                margin-top: 33px;
-                font-size: 12px;
-                font-weight: bold;
-                width: 33px;
-                text-align: center;
-                &.effect {
-                    background: url(../images/effect.png) center 1px no-repeat;
-                    background-size: 21px;
+                a {
+                    display: block;
+                    padding-top: 33px;
+                    margin-top: 47px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    width: 33px;
+                    text-align: center;
+                    color: #aeb1b0;
                 }
-                &.stop {
-                    background: url(../images/stop.png) center 0px no-repeat;
-                    background-size: 20px;
+            }
+            .company a {
+                background: url(../images/companyoff.png) center 0 no-repeat;
+                background-size: 27px;
+            }
+            .company.on {
+                a {
+                    background-image: url(../images/companyon.png);
+                    background-size: 33px;
+                    color: #fff;
+                }
+            }
+            .source a {
+                background: url(../images/sourceoff.png) no-repeat;
+                background-size: 28px;
+                background-position: center 1px;
+            }
+            .source.on {
+                a {
+                    background-image: url(../images/sourceon.png);
+                    background-size: 34px;
+                    background-position: center 0;
+                    color: #fff;
                 }
             }
         }
-        .btn {
+        .content {
             text-align: center;
-            margin: 0 63px;
-            height: 52px;
-            font-size: 18px;
+            margin-top: 44px;
             font-weight: bold;
-            line-height: 52px;
-            border-radius: 26px;
-            background: linear-gradient(to left, #6ce4ba, #77e46c);
-            a {
-                color: #fff;
+            font-size: 18px;
+            .song-name {}
+            .lyrics {
+                margin-top: 16px;
+                font-size: 15px;
+                line-height: 25px;
+                li{
+                    position: relative;
+                    // // display: inline-block;
+                }
+                .on{
+                    color: #fbec53;
+                    transform:translateX(15px);
+                    span{
+                        // position: fixed;
+                        transform: translateY(-5px);                        
+                        color: #ce4a62;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background:#fbeb52 ;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+
+        .bottom-btn {
+            position: fixed;
+            bottom: 23px;
+            width: 100%;
+            .func {
+                display: flex;
+                justify-content: space-between;
+                div {
+                    padding: 20px 33px;
+                    margin-top: 33px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    width: 33px;
+                    text-align: center;
+                    &.effect {
+                        background: url(../images/effect.png) center 1px no-repeat;
+                        background-size: 21px;
+                    }
+                    &.stop {
+                        background: url(../images/stop.png) center 0px no-repeat;
+                        background-size: 20px;
+                    }
+                }
+            }
+            .btn {
+                text-align: center;
+                margin: 0 63px;
+                height: 52px;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 52px;
+                border-radius: 26px;
+                background: linear-gradient(to left, #6ce4ba, #77e46c);
+                a {
+                    display: block;
+                    color: #fff;
+                }
             }
         }
     }
+    .close-tips {
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        .tips {
+            // margin:0 47.5px;
+            width: 280px;
+            height: 145px;
+            border-radius: 4px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            .content {
+                font-size: 18px;
+                line-height: 2;
+                padding: 35px 30px 0;
+            }
+            .btn {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                border-top: 1px solid #d2d3d5;
+                div {
+                    position: absolute;
+                    width: 50%;
+                    text-align: center;
+                    &:last-child {
+                        left: 50%;
+                        color: #6ce4ba;
+                        border-left: 1px solid #d2d3d5;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 .publish {
@@ -874,6 +957,49 @@ section {
         .tips {
             position: relative;
             top: 50%;
+        }
+    }
+    .close-tips {
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        .tips {
+            // margin:0 47.5px;
+            width: 280px;
+            height: 145px;
+            border-radius: 4px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            .tips-content {
+                font-size: 18px;
+                line-height: 2;                
+                padding: 35px 0px 0;
+            }
+            .btn {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                border-top: 1px solid #d2d3d5;
+                div {
+                    position: absolute;
+                    width: 50%;                    
+                    &:last-child {
+                        left: 50%;
+                        color: #6ce4ba;
+                        border-left: 1px solid #d2d3d5;
+                    }
+                }
+            }
         }
     }
 }
