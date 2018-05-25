@@ -84,30 +84,31 @@ section {
         display: flex;
         justify-content: space-between;
         .search {
-            width: 89%;
-        }
-        input {
-            width: 100%;
-            padding-left: 30px;
-            box-sizing: border-box;
-            background: #f4f4f4 url(../images/search.png)10px center no-repeat;
-            background-size: 15px 15px;
-            color: #adadad;
-            border: 0;
-            font-size: 12px;
-            height: 25px;
-            line-height: 25px;
-            margin: 5px 0;
-            border-radius: 13px;
-            &:active {
+            width: 89%;        
+            a {
+                display: block;
+                width: 100%;
+                padding-left: 30px;
+                box-sizing: border-box;
+                background: #f4f4f4 url(../images/search.png)10px center no-repeat;
+                background-size: 15px 15px;
+                color: #adadad;
                 border: 0;
+                font-size: 12px;
+                height: 25px;
+                line-height: 25px;
+                margin: 10px 0;
+                border-radius: 13px;
+                &:active {
+                    border: 0;
+                }
             }
         }
         .rank {
             width: 36px;
-            margin-top: 1px;
+            margin-top: 9px;
             text-align: center;
-            line-height: 1;
+            line-height: 14px;
             img {
                 width: 22px;
                 display: block;
@@ -130,6 +131,10 @@ section {
         height: 24px;
         border-bottom: 1px solid #ecefef;
         overflow: hidden;
+        ul{
+            position: relative;
+            width: 1000px;
+        }
         li {
             float: left;
             color: #aeb1b0;
@@ -348,7 +353,7 @@ section {
     .lolipop {
         width: 100%;
         height: 60px;
-        line-height: 60px;
+        // line-height: 60px;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -360,8 +365,15 @@ section {
             padding-left: 53px;
             background: url(../images/lolipop.png)15px center no-repeat;
             background-size: 31px;
+            div{
+                margin-top: 15px;
+            }
+            a{
+                color: #adadad;
+                font-size: 12px;
+            }
         }
-        a {
+        &>a {
             margin: 16px;
             color: #6ce4ba;
             font-size: 12px;
@@ -414,6 +426,7 @@ section {
             }
             img {
                 width: 100%;
+                display: block;
             }
             .title {
                 color: #1b201f;
@@ -724,8 +737,7 @@ section {
             text-align: center;
             margin-top: 44px;
             font-weight: bold;
-            font-size: 18px;
-            .song-name {}
+            font-size: 18px;            
             .lyrics {
                 margin-top: 16px;
                 font-size: 15px;
