@@ -16,7 +16,15 @@ html {
 body {
     height: 100%;
 }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
 
+    to {
+        transform: rotate(360deg);
+    }
+}
 section {
     // overflow-x: hidden;
     padding-bottom: 65px;
@@ -951,16 +959,26 @@ section {
         padding-bottom: 20px;
         background-color: #fff;
         border-radius: 4px;
-        .logo {
+        .star {
             width: 101px;
             height: 101px;
             margin: 0 auto 26px;            
             padding-top: 20px;
-            background: url(../images/starbg.png) center 20px no-repeat;
-            background-size: 101px;
-            // transform: rotate(90deg);
-            img {
-                
+            position: relative;
+            .starbg{
+                position: absolute;
+                left:0;
+                top:0;
+                z-index: 0;
+                height: 100%;
+                width: 100%;
+                background: url(../images/starbg.png) center  no-repeat;
+                background-size: 101px;
+                animation:rotate 5s linear infinite;
+
+            }
+            img {     
+                position: relative;       
                 width: 87px;
             }
         }
@@ -1272,9 +1290,10 @@ section.detail {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        box-shadow: 0 0 5px rgba(#000000 , .07) ;
         background: linear-gradient(to left, #6ce4ba, #77e46c);
         div {
-            width: 50%;
+            // width: 50%;            
             text-align: center;
             height: 49px;
             font-size: 10px;
@@ -1288,9 +1307,22 @@ section.detail {
                 background-size: 21px;
             }
             &.lolipop {
+                flex:1;
                 background: rgba(#fff, .2);
                 a {
                     background-image: url(../images/white-lolipop.png);
+                }
+            }
+            &.share{
+                flex:1;
+            }
+            &.home{
+                background-color: #fff;
+                width: 71px;
+                a {
+                    background-image: url(../images/home.png);
+                    background-size: 23px;
+                    color: #1b201f;
                 }
             }
         }
@@ -1339,6 +1371,7 @@ section.detail {
             border: 1px solid #f1f1f1;
             margin-bottom: 4.5px;
             width: 100%;
+            color: #1b201f;
         }
         a {
             position: absolute;
@@ -1351,6 +1384,7 @@ section.detail {
             text-align: center;
             color: #fff;
             border-radius: 4px;
+            z-index: 9999;
         }
     }
     form>input{
