@@ -524,6 +524,22 @@ section {
             }
         }
     }
+    .toast{
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #171b19;
+        filter: blur(97%);
+        border-radius: 20px;
+        width: 170px;
+        text-align: center;
+        margin:0 auto;
+    }
 }
 
 .rank {
@@ -1123,9 +1139,9 @@ section.detail {
         text-align: center;
         color: #fff;
         width: 100%;
-        height: 155px;
+        height: 199px;
         background: rgba(#4c4d44, .81);
-        padding-top: 65px;
+        padding-top: 21px;
         font-size: 18px;
         line-height: 25px;
         // font-weight: bold;
@@ -1135,6 +1151,23 @@ section.detail {
             }
             margin-top: 15px;
             font-size: 15px;
+        }
+        .disc{
+            width: 156px;
+            height: 156px;
+            background: url(../images/disc.png) no-repeat;
+            background-size: 156px;
+            margin:0 auto;
+            position: relative;
+        }
+        .string{
+            position: absolute;
+            top: 68px;
+            right: -33px;
+            width: 104px;
+            height: 75px;
+            background: url(../images/string.png) no-repeat;
+            background-size: 104px;
         }
         .bg {
             position: absolute;
@@ -1153,11 +1186,12 @@ section.detail {
             height: 18px;
             line-height: 18px;
             .play {
-                width: 14px;
-                height: 18px;
-                margin-left: 20px;
+                width: 26px;
+                height: 26px;
+                margin-left: 12px;
+                margin-top: -4px;
                 background: url(../images/play.png) center no-repeat;
-                background-size: 14px;
+                background-size: 26px;
                 float: left;
                 &.playing {
                     background-image: url(../images/pause.png);
@@ -1229,12 +1263,13 @@ section.detail {
                 }
             }
         }
-        .score {
-            color: #cec42b;
+        .del {
+            color: #a9aca9;
             font-size: 10px;
-            span {
-                font-size: 23px;
-            }
+            background: url(../images/del.png)center 0 no-repeat;
+            background-size: 19px;
+            padding-top: 27px;
+            margin-top: 10px;
         }
     }
     .recieve-lolipop {
@@ -1253,6 +1288,44 @@ section.detail {
         .num {
             color: #6ee4a9;
             padding-right: 40px;
+        }
+    }
+    .recieve-record{
+        border-top: 7.5px solid #f9f9f9;
+        .title{
+            height: 41px;
+            line-height: 41px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #a9aca9;
+            padding: 0 12px;
+            border-bottom: 1px solid #ecefef;
+        }
+        li{
+            display: flex;
+            padding: 0 12px;
+            height: 65px;
+            border-bottom: 1px solid #ecefef;
+            img{
+                padding-top: 15px;
+                width: 36px;
+                height: 36px;
+                padding-right: 11px;
+            }
+            .title2{
+                padding-top: 17px;
+                font-size: 15px;
+                line-height: 1;
+                span{
+                    color: #74e5ac;
+                }
+            }
+            .time{
+                line-height: 1;
+                padding-top: 10px;
+                font-size: 12px;
+                color: #a9aca9;
+            }
         }
     }
     .lolipop-num {
