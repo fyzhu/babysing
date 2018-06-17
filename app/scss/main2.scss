@@ -211,7 +211,7 @@ section{
 }
 .sing{
     text-align: center;
-    background: #fffcea;
+    background: #e9ffea;
     .title{
         text-align: left;
         height: 18px;
@@ -240,10 +240,19 @@ section{
         color: #72877b;
     }
     .bottom-btn{
+        padding-top: 44px;
+        padding-bottom: 44px;
+        background-color: #e9ffea;
         position: fixed;
-        left: 50%;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+    
+    a{
+        display: inline-block;
+       
         bottom: 44px;
-        margin-left: -100px;
+        
         background: #00d059;
         color: #fff;
         border-radius: 25px;
@@ -251,6 +260,7 @@ section{
         height: 50px;
         line-height: 50px;
         
+    }
     }
     .advice{
         position: fixed;
@@ -260,6 +270,113 @@ section{
         img{
             width: 25px;
         }
-        bottom: 110px;
+        bottom: 140px;
+    }
+}
+
+.publish{
+    text-align: center;
+    background: #e9ffea;
+    .title{
+        text-align: left;
+        height: 18px;
+        background-color: #00d059;
+        font-size: 18px;
+        color: #fff;
+        padding: 18px 27.5px 12px;
+        line-height: 1;
+    }
+    .disc{
+        margin-top: 12%;
+        img{
+            width: 235px;
+
+        }
+    }
+    .control {
+        position: absolute;
+        width: 100%;
+        bottom: 200px;
+       
+        
+        .progress-bar {
+            
+            padding-left: 27.5px;
+            padding-right: 27.5px;
+            .bar-inner {
+                margin-top: 8px;
+                height: 8px;
+                width: 100%;
+                background: #aae4ad;
+                position: relative;
+                border-radius: 4px;
+                .progress {
+                    position: absolute;
+                    top: -1px;
+                    width: 50%;
+                    height: 8px;
+                    border-radius: 4px;
+                    background: #00d059;
+                }
+                .progress-btn {
+                    
+                }
+            }
+        }
+        .time {
+            padding: 0 27.5px;
+            position: absolute;
+            top: -15px;
+            width: 100%;
+            box-sizing: border-box;
+            .current-time{
+                float: left;
+            }
+            .total-time{
+                float: right;
+            }
+        }
+        .pause{
+            width: 45px;
+            height: 45px;
+            background: url(../images2/pause.png) no-repeat;
+            background-size: 45px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 28px;
+        }
+    }
+    .bottom-btn{
+        position: fixed;
+        // left: 50%;
+        width: 100%;
+        box-sizing: border-box;
+
+        bottom: 44px;
+        
+        a:first-child{
+            // background: #00d059;
+            color: #00d059;
+            border: 1px solid #00d059;
+            border-radius: 25px;
+            height: 48px;
+            width: 128px;
+
+        }
+        
+        a:last-child{
+            background: #00d059;
+            color: #fff;
+            border-radius: 25px;
+            height: 50px;
+            width: 130px;
+
+        }
+        padding: 0 27.5px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 50px;
+        
     }
 }
