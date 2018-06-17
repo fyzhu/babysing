@@ -1,0 +1,171 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    margin:0;
+}
+
+body {
+    height: 100%;
+    margin:0;
+}
+section{
+    // padding: 0 27.5px;
+    height: 100%;
+
+
+}
+.home{
+    text-align: center;
+    background: #fffcea;
+    .title{
+        text-align: left;
+        height: 18px;
+        background-color: #ffdc4f;
+        font-size: 18px;
+        color: #333;
+        padding: 18px 27.5px 12px;
+    }
+    .me{
+        .avatar img{
+        width: 64px;
+        margin-top: 19px;
+        margin-bottom: 19px;
+        border-radius: 50%;
+    }
+    .name{
+        color: #7f513c;
+        font-size: 18px;
+        line-height: 1;
+    }
+    .flower{
+        font-size: 14px;
+        color: #7f513c;
+        margin-top: 5px;
+        height: 18px;
+        line-height: 18px;
+        background: url(../images2/flower.png)left center no-repeat;
+        background-size: 11px;
+        display: inline-block;
+        padding-left: 15px;
+    }
+    }
+    ul {
+        margin-top: 43px;
+        padding: 0 27.5px;    
+        .empty{
+            background: #fff7db;
+            padding: 60px 0;
+            border-radius: 10px;
+            div{
+                margin-top: 15px;
+            }
+            img{
+                width: 90px;
+            }
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            height: 70px;
+            background-color: #fdf2cd;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            .left{
+                display: flex;
+                >div:first-child{
+                    margin-left: 20px;
+                    font-size: 11px;
+                    color: #574e4e;
+                    // float: left;
+                }
+                .avatar{
+                    position: relative;
+                    &::after{
+                        content:"";
+                        position: absolute;
+                        top: 3px;
+                        right: -3px;
+                        display: block;
+                        background: url(../images2/crawn.png) no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        background-size: 20px;
+                    }
+                    img{
+                        margin-top: 12px;
+                        width: 40px;
+                        border-radius: 40px;
+                    }
+                }
+                >div:last-child{
+                    margin-top: 18px;
+                    margin-left: 24px;
+                    color: #7f513c;
+                    text-align: left;
+                    .up{
+                        font-size: 16px;
+                        line-height: 1;
+                    }
+                    .down{
+                        display: flex;
+                        // justify-content: space-between;
+                        >div:first-child{
+                            margin-right: 15px;
+                        }
+                        margin-top: 10px;
+                        font-size: 12px;
+                        span{
+                            color: #dc4223;
+                        }
+                    }
+                    
+                }
+            }
+            .btn{
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                background-color: #faad60;
+                color: #fff;
+                border-radius: 15px;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .bottom-btn{
+        position: fixed;
+        left: 50%;
+        bottom: 44px;
+        margin-left: -100px;
+        background: #00d059;
+        color: #fff;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+    .advice{
+        position: fixed;
+        right: 14px;
+        font-size: 9px;
+        color: #4e8cee;
+        img{
+            width: 25px;
+        }
+        bottom: 110px;
+    }
+    
+}
